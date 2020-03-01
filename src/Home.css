@@ -1,0 +1,12 @@
+.Home{
+    text-align: center;
+}
+#header{
+    height: 10vh;
+    width: 100vw;
+    background: linear-gradient(#ebebeb,#ffffff);
+}
+#login{
+    float: right;
+    margin: 3vh 10vw 3vh 0vw;
+}
