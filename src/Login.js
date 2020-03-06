@@ -2,8 +2,8 @@ import React,{useState} from 'react';
 import './Login.css';
 
 
-const submit = ()=>{
-
+const submit = (creds)=>{
+  console.log('this is submitted creds' + creds)
 }
 
 function Login() {
@@ -11,19 +11,16 @@ function Login() {
 
   return (
     <div className="login">
-      {/* <form onSubmit={submit} >
-        <label>
-          UserName : 
-          <input type='text' value = {creds.username} onChange={(event)=>{
-            setCreds({...creds, 'username' : event.target.value })
-            
-          }} />
-        </label>
-      </form> */}
       <div id='form' >
-        <label className = 'label'>Username</label> <br/>
-        <input type="text" id="fname" name="username" placeholder="Username / Email...." />
+        <div className='inputDiv' >
+          <label className = 'label'>Username</label> <br/>
+          <input type="email" id="username" name="username" placeholder="Username / Email...." onChange={(event)=>{setCreds({...creds,username : event.target.value})}} />
 
+          <label className = 'label'>Password</label> <br/>
+          <input type="password" id="password" name="username"  onChange={(event)=>{setCreds({...creds,password : event.target.value})}} />
+
+          <div id='loginBtn' onClick={()=>{submit(creds)}}>Login</div>
+        </div>
       </div>
     </div>
   );

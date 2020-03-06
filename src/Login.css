@@ -4,18 +4,39 @@
 
 #form{
     width:40vw;
-    height:90vh;
+    height:89vh;
     margin:5vh 30vw;
     /* box-shadow: 3px 3px 50px 1px rgb(236, 236, 236); */
     border: 1px solid rgb(197, 197, 197);
     border-radius: 8px;
+    display: flex;
+    align-items: center;
 }
-input[type=text], select {
+.inputDiv{
+    width: 100%;
+}
+input{
     width: 80%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
     border: 1px solid rgb(197, 197, 197);
     border-radius: 4px;
-    box-sizing: border-box;
-  }
+    box-sizing: border-box; 
+}
+.label{
+    float: left;
+    margin: 2% 10% 0% 10%;
+}
+#loginBtn{
+    margin: 5%;
+    padding : 8px 40px;
+    border: 2px solid #96c1b7;
+    cursor: pointer;
+    color: #96c1b7;
+    font-weight: 500;
+    display: inline-block;
+}
+#loginBtn:hover{
+    background-color: #96c1b7;
+    color: #ffffff;
+}
